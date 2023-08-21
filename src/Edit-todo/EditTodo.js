@@ -13,7 +13,7 @@ function EditTodo({ todo, clickToEdit }) {
                                         ${todo.isTodoDone ? 'bg-green-300' : 'bg-red-300'} xs:w-[73%] md:w-3/6 lg:w-[38%]
                                         xl:w-[28%]`}>
           <input type="text" onChange={inputValue} value={text} autoFocus
-                 className="focus:outline-none px-2 rounded"/>
+                 className="focus:outline-none px-2 rounded xs:w-[60%]"/>
           <div className="edit-and-delete flex items-center">
             <i className="pi pi-file-edit cursor-pointer" onClick={() => clickToEdit(text)}></i>
           </div>
