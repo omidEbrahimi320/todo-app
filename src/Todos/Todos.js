@@ -15,13 +15,13 @@ function Todos({ item, toggleDoneUndon, clickToDoneOrUnDone, deleteTodo, getEdit
              className={`todo flex justify-between  px-3 py-2 rounded mt-2 
                          ${item.isTodoDone ? 'bg-green-300' : 'bg-red-300'} xs:w-[73%] md:w-3/6 lg:w-[38%]
                          xl:w-[28%]`}>
-          <div className='flex items-center'>
+          <div className='flex items-center w-[85%]'>
             <input 
                   type="checkbox" 
                   onClick={() => toggleDoneUndon(item.id)}
                   defaultChecked={item.isTodoDone ? true : false}
             />
-            <span className='todoName ml-3' onClick={() => clickToDoneOrUnDone(item.id)}>{item.todoName}</span>
+            <span className="todoName ml-3 w-[80%] overflow-x-auto" onClick={() => clickToDoneOrUnDone(item.id)}>{item.todoName}</span>
           </div>
           <div className="edit-and-delete flex items-center">
             <i className="pi pi-trash mr-4 cursor-pointer" onClick={() => deleteTodo(item.id)}></i>
